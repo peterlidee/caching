@@ -1,6 +1,6 @@
-import Header from '../components/static/Header';
-import Main from '../components/static/Main';
-import Footer from '../components/static/Footer';
+import Header from '@/components/static/Header';
+import Main from '@/components/static/Main';
+import Footer from '@/components/static/Footer';
 
 export default async function page({
   searchParams,
