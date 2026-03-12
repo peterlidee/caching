@@ -7,6 +7,7 @@ const links = [
     route: '/dynamic-example-route?name=peter',
   },
   { label: 'static client', route: '/static-client' },
+  { label: 'ISR blog', route: '/blog' },
 ];
 
 export default function Home() {
