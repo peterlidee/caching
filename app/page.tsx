@@ -19,6 +19,7 @@ const chapters = [
     title: 'Chapter 4: data cache',
     links: [
       { label: 'static + cache', route: '/cache/static' },
+      { label: 'dynamic element in static + cache', route: '/cache/notstatic' },
       { label: 'dynamic + cache', route: '/cache/dynamic' },
     ],
   },
