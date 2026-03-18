@@ -16,6 +16,13 @@ const chapters = [
     links: [{ label: 'static client', route: '/static-client' }],
   },
   {
+    title: 'Chapter 4: data cache',
+    links: [
+      { label: 'static + cache', route: '/cache/static' },
+      { label: 'dynamic + cache', route: '/cache/dynamic' },
+    ],
+  },
+  {
     title: 'Chapter 5: time based revaldiation',
     links: [{ label: 'revalidate time', route: '/revalidateTime' }],
   },
