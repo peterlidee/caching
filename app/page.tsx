@@ -24,8 +24,20 @@ const chapters = [
     ],
   },
   {
-    title: 'Chapter 5: time based revaldiation',
-    links: [{ label: 'revalidate time', route: '/revalidateTime' }],
+    title: 'Chapter 6: time based revaldiation',
+    links: [
+      { label: 'simple example', route: '/revalidate/time/simple' },
+      {
+        label: 'route revalidate number',
+        route: '/revalidate/time/number',
+      },
+      {
+        label: 'route revalidate false',
+        route: '/revalidate/time/false',
+      },
+      { label: 'route revalidate 0', route: '/revalidate/time/zero' },
+      { label: 'rws example', route: '/revalidate/time/swr' },
+    ],
   },
   {
     title: 'Chapter 6: revalidatePath',
