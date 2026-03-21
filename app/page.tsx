@@ -26,7 +26,8 @@ const chapters = [
   {
     title: 'Chapter 6: time based revaldiation',
     links: [
-      { label: 'simple example', route: '/revalidate/time/simple' },
+      { label: 'static example', route: '/revalidate/time/static' },
+      { label: 'dynamic example', route: '/revalidate/time/dynamic' },
       {
         label: 'route revalidate number',
         route: '/revalidate/time/number',
@@ -36,12 +37,12 @@ const chapters = [
         route: '/revalidate/time/false',
       },
       { label: 'route revalidate 0', route: '/revalidate/time/zero' },
-      { label: 'rws example', route: '/revalidate/time/swr' },
+      { label: 'swr example', route: '/revalidate/time/swr' },
     ],
   },
   {
-    title: 'Chapter 6: revalidatePath',
-    links: [{ label: 'revalidate path tests', route: 'revalidatePath' }],
+    title: 'Chapter 7: revalidatePath',
+    links: [{ label: 'swr test', route: 'revalidate/path/swr' }],
   },
   {
     title: 'Chapter 8: ISR',
