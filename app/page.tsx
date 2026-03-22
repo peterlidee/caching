@@ -42,7 +42,10 @@ const chapters = [
   },
   {
     title: 'Chapter 7: revalidatePath',
-    links: [{ label: 'swr test', route: 'revalidate/path/swr' }],
+    links: [
+      { label: 'swr test', route: 'revalidate/path/swr' },
+      { label: 'no revalidate example', route: 'revalidate/path/norevalidate' },
+    ],
   },
   {
     title: 'Chapter 8: ISR',
