@@ -45,6 +45,7 @@ const chapters = [
     links: [
       { label: 'swr test', route: 'revalidate/path/swr' },
       { label: 'no revalidate example', route: 'revalidate/path/norevalidate' },
+      { label: 'ryor test', route: 'revalidate/path/ryor' },
     ],
   },
   {
