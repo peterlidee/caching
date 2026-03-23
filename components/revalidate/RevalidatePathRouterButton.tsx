@@ -9,7 +9,7 @@ interface RevalidateResponse {
   message?: string;
 }
 
-export default function RouterRevalidateButton({
+export default function RevalidatePathRouterButton({
   apiEndpoint,
   routeToRevalidate,
 }: {

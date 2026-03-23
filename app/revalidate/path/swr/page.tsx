@@ -1,5 +1,5 @@
 import Post from '@/components/Post';
-import RouterRevalidateButton from '@/components/revalidate/RouterRevalidateButton';
+import RevalidatePathRouterButton from '@/components/revalidate/RevalidatePathRouterButton';
 
 export default function page() {
   return (
@@ -9,7 +9,7 @@ export default function page() {
         <Post postId={36} fetchOptions={{ next: { revalidate: 1800 } }} />
         <Post postId={37} fetchOptions={{ cache: 'force-cache' }} />
       </div>
-      <RouterRevalidateButton
+      <RevalidatePathRouterButton
         apiEndpoint='/revalidate/api/revalidatePath'
         routeToRevalidate='/revalidate/path/swr'
       />

@@ -3,7 +3,7 @@
 import { useActionState, useTransition } from 'react';
 import { revalidatePathAction } from '@/app/revalidate/path/action/revalidatePathAction';
 
-export default function RouterRevalidateButton({
+export default function RevalidatePathActionButton({
   routeToRevalidate,
 }: {
   routeToRevalidate: string;

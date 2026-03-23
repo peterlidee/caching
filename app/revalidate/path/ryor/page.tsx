@@ -1,5 +1,5 @@
 import Post from '@/components/Post';
-import ActionRevalidateButton from '@/components/revalidate/ActionRevalidateButton';
+import RevalidatePathActionButton from '@/components/revalidate/RevalidatePathActionButton';
 
 export default function page() {
   return (
@@ -9,7 +9,7 @@ export default function page() {
         <Post postId={39} fetchOptions={{ next: { revalidate: 1800 } }} />
         <Post postId={40} fetchOptions={{ cache: 'force-cache' }} />
       </div>
-      <ActionRevalidateButton routeToRevalidate='/revalidate/path/ryor' />
+      <RevalidatePathActionButton routeToRevalidate='/revalidate/path/ryor' />
     </>
   );
 }
