@@ -1,7 +1,7 @@
 'use client';
 
+import { revalidatePathAction } from '@/app/revalidate/_actions/revalidatePathAction';
 import { useActionState, useTransition } from 'react';
-import { revalidatePathAction } from '@/app/revalidate/path/action/revalidatePathAction';
 
 export default function RevalidatePathActionButton({
   routeToRevalidate,
