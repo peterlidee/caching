@@ -1,4 +1,4 @@
-// from example https://nextjs.org/docs/app/api-reference/functions/revalidatePath#route-handler
+// mostly from example https://nextjs.org/docs/app/api-reference/functions/revalidatePath#route-handler
 
 import { revalidatePath } from 'next/cache';
 import type { NextRequest } from 'next/server';
@@ -8,12 +8,11 @@ export async function GET(request: NextRequest) {
 
   if (path) {
     revalidatePath(path);
-    return Response.json({ revalidated: true, now: Date.now() });
+    return Response.json({ revalidated: true });
   }
 
   return Response.json({
     revalidated: false,
-    now: Date.now(),
     message: 'Missing path to revalidate',
   });
 }

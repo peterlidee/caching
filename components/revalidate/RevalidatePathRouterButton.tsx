@@ -5,7 +5,6 @@ import { useState } from 'react';
 
 interface RevalidateResponse {
   revalidated: boolean;
-  now: number;
   message?: string;
 }
 
@@ -16,7 +15,6 @@ export default function RevalidatePathRouterButton({
   apiEndpoint: string;
   routeToRevalidate: string;
 }) {
-  const [status, setStatus] = useState<'success' | 'error' | null>(null);
   const [result, setResult] = useState<RevalidateResponse | null>(null);
 
   const handleRevalidate = async () => {
@@ -32,10 +30,9 @@ export default function RevalidatePathRouterButton({
 
       const data: RevalidateResponse = await res.json();
       setResult(data);
-      setStatus(data.revalidated ? 'success' : 'error');
     } catch (err) {
       console.error(err);
-      setStatus('error');
+      setResult({ revalidated: false });
     }
   };
 
@@ -48,13 +45,11 @@ export default function RevalidatePathRouterButton({
         Revalidate
       </button>
 
-      {status === 'success' && result && (
-        <p className='text-green-600 text-sm'>
-          Revalidated at {new Date(result.now).toLocaleTimeString()}
-        </p>
+      {result && result.revalidated && (
+        <p className='text-green-600 text-sm'>Revalidated</p>
       )}
 
-      {status === 'error' && (
+      {result && !result.revalidated && (
         <p className='text-red-600 text-sm'>
           {result?.message || 'An error occurred while revalidating.'}
         </p>
