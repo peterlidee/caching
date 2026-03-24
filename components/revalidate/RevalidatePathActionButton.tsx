@@ -24,9 +24,7 @@ export default function RevalidatePathActionButton({
       </button>
 
       {state && state.revalidated && (
-        <p className='text-green-600 text-sm'>
-          Revalidated at {new Date(state.now).toLocaleTimeString()}
-        </p>
+        <p className='text-green-600 text-sm'>Revalidated</p>
       )}
 
       {state && !state.revalidated && (

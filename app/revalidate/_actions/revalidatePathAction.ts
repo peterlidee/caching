@@ -2,7 +2,6 @@
 
 type RevalidateStateT = {
   revalidated: boolean;
-  now: number;
   message?: string;
 } | null;
 
@@ -16,12 +15,10 @@ export async function revalidatePathAction(
     revalidatePath(path);
     return {
       revalidated: true,
-      now: Date.now(),
     };
   }
   return {
     revalidated: false,
-    now: Date.now(),
     message: 'Missing path to revalidate',
   };
 }
