@@ -44,12 +44,27 @@ const chapters = [
     title: 'Chapter 7: revalidatePath',
     links: [
       { label: 'swr test', route: 'revalidate/path/swr' },
-      { label: 'no revalidate example', route: 'revalidate/path/norevalidate' },
+      { label: 'swr test copy', route: 'revalidate/path/swr-copy' },
       { label: 'ryor test', route: 'revalidate/path/ryor' },
+      { label: 'ryor test copy', route: 'revalidate/path/ryor-copy' },
     ],
   },
   {
-    title: 'Chapter 8: ISR',
+    title: 'Chapter 8: revalidateTag and updateTag',
+    links: [
+      { label: 'external', route: 'revalidate/tag/external' },
+      { label: 'revalidateTag with max', route: 'revalidate/tag/max' },
+      {
+        label: 'revalidateTag with expires 0',
+        route: 'revalidate/tag/expires',
+      },
+      { label: 'other expires', route: 'revalidate/tag/otherExpires' },
+      { label: 'updateTag', route: 'revalidate/tag/updateTag' },
+      { label: 'other route', route: 'revalidate/tag/other' },
+    ],
+  },
+  {
+    title: 'Chapter 9: ISR',
     links: [{ label: 'ISR blog', route: '/blog' }],
   },
 ];
@@ -66,7 +81,11 @@ export default function Home() {
               <ul>
                 {chapter.links.map((link) => (
                   <li key={link.route}>
-                    <Link href={link.route} className='underline text-blue-500'>
+                    <Link
+                      href={link.route}
+                      className='underline text-blue-500'
+                      prefetch={false}
+                    >
                       {link.label}
                     </Link>
                   </li>
