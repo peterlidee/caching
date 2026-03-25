@@ -4,7 +4,6 @@ import { useState } from 'react';
 
 interface RevalidateResponse {
   revalidated: boolean;
-  now: number;
   message?: string;
 }
 
@@ -15,21 +14,15 @@ export default function RevalidateTagRouterButton({
 }: {
   apiEndpoint: string;
   tag: string;
-  profile: 'max' | 'expires';
+  profile: 'max' | 'expire';
 }) {
-  const [status, setStatus] = useState<'success' | 'error' | null>(null);
   const [result, setResult] = useState<RevalidateResponse | null>(null);
 
   const handleRevalidate = async () => {
     setResult(null);
 
-    console.log(
-      'calling api endpoint: ',
-      `${apiEndpoint}?tag=${encodeURIComponent(tag)}&profile=${encodeURIComponent(profile)}`,
-    );
-
     try {
-      // Calling your route.ts with the path parameter
+      // Calling the route.ts with the tag and profile parameters
       const res = await fetch(
         `${apiEndpoint}?tag=${encodeURIComponent(tag)}&profile=${encodeURIComponent(profile)}`,
       );
@@ -38,10 +31,11 @@ export default function RevalidateTagRouterButton({
 
       const data: RevalidateResponse = await res.json();
       setResult(data);
-      setStatus(data.revalidated ? 'success' : 'error');
     } catch (err) {
       console.error(err);
-      setStatus('error');
+      setResult({
+        revalidated: false,
+      });
     }
   };
 
@@ -54,13 +48,11 @@ export default function RevalidateTagRouterButton({
         Revalidate tag {tag}
       </button>
 
-      {status === 'success' && result && (
-        <p className='text-green-600 text-sm'>
-          Revalidated at {new Date(result.now).toLocaleTimeString()}
-        </p>
+      {result && result.revalidated && (
+        <p className='text-green-600 text-sm'>Revalidated</p>
       )}
 
-      {status === 'error' && (
+      {result && !result.revalidated && (
         <p className='text-red-600 text-sm'>
           {result?.message || 'An error occurred while revalidating.'}
         </p>
