@@ -15,11 +15,11 @@ export default function page() {
       </div>
       <div className='mb-8'>
         <h2 className='font-bold mb-2'>
-          revalidateTag(post-expire 0 from route handler (RYOR)
+          revalidateTag(post-45, {'{ expire: 0 }'}) from route handler (RYOR)
         </h2>
         <RevalidateTagRouterButton
           apiEndpoint='/revalidate/api/revalidateTag'
-          tag='post-42'
+          tag='post-45'
           profile='expire'
         />
       </div>
