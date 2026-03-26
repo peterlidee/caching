@@ -52,15 +52,13 @@ const chapters = [
   {
     title: 'Chapter 8: revalidateTag and updateTag',
     links: [
-      { label: 'external', route: 'revalidate/tag/external' },
       { label: 'revalidateTag with max', route: 'revalidate/tag/max' },
       {
         label: 'revalidateTag with expires 0',
-        route: 'revalidate/tag/expires',
+        route: 'revalidate/tag/expire',
       },
-      { label: 'other expires', route: 'revalidate/tag/otherExpires' },
       { label: 'updateTag', route: 'revalidate/tag/updateTag' },
-      { label: 'other route', route: 'revalidate/tag/other' },
+      { label: 'updateTag copy', route: 'revalidate/tag/updateTag-copy' },
     ],
   },
   {
