@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export type PostT = {
+export type SinglePostT = {
   id: number;
   title: string;
   body: string;
@@ -8,7 +8,7 @@ export type PostT = {
 
 export async function getPosts() {
   const data = await fetch('https://jsonplaceholder.typicode.com/posts');
-  const posts: PostT[] = await data.json(); // 100 posts
+  const posts: SinglePostT[] = await data.json(); // 100 posts
   return posts.slice(0, 5); // return 5 posts
 }
 

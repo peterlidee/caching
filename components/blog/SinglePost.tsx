@@ -1,18 +1,13 @@
-import { PostT } from '@/app/blog/page';
+import { SinglePostT } from '@/app/blog/page';
 import Link from 'next/link';
 
 type Props = {
   id: string;
 };
 
-export async function getPost(id: string) {
+export default async function SinglePost({ id }: Props) {
   const data = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
-  const post: PostT = await data.json();
-  return post;
-}
-
-export default async function Post({ id }: Props) {
-  const post = await getPost(id);
+  const post: SinglePostT = await data.json();
   return (
     <div>
       <h1 className='text-xl font-bold mb-2'>{post.title}</h1>
