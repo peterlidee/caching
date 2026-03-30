@@ -65,6 +65,10 @@ const chapters = [
     title: 'Chapter 9: ISR',
     links: [{ label: 'ISR blog', route: '/blog' }],
   },
+  {
+    title: 'Chapter 10: Router cache and request memoization',
+    links: [{ label: 'request memoization test', route: '/memoization' }],
+  },
 ];
 
 export default function Home() {
