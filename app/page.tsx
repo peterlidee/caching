@@ -69,6 +69,14 @@ const chapters = [
     title: 'Chapter 10: Router cache and request memoization',
     links: [{ label: 'request memoization test', route: '/memoization' }],
   },
+  {
+    title: 'Chapter 11: Suspense',
+    links: [
+      { label: 'static', route: '/suspense/static' },
+      { label: 'updateTag', route: '/suspense/updateTag' },
+      { label: 'dynamic', route: '/suspense/dynamic' },
+    ],
+  },
 ];
 
 export default function Home() {
