@@ -75,6 +75,10 @@ const chapters = [
       { label: 'static', route: '/suspense/static' },
       { label: 'updateTag', route: '/suspense/updateTag' },
       { label: 'dynamic', route: '/suspense/dynamic' },
+      {
+        label: 'useSearchParams',
+        route: '/suspense/useSearchParams?name=peter',
+      },
     ],
   },
 ];
