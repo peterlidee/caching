@@ -1,6 +1,6 @@
 import Post from '@/components/Post';
 
-export default function page() {
+export default function Page() {
   return (
     <div>
       <h2 className='font-bold mb-4'>

@@ -2,7 +2,7 @@ import Post from '@/components/Post';
 
 export const revalidate = 0; // no-store
 
-export default function page() {
+export default function Page() {
   return (
     <>
       <Post postId={27} fetchOptions={{}} />

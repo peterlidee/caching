@@ -1,7 +1,7 @@
 import Post from '@/components/Post';
 import RevalidatePathActionButton from '@/components/revalidate/RevalidatePathActionButton';
 
-export default function page() {
+export default function Page() {
   return (
     <>
       <div className='mb-8'>

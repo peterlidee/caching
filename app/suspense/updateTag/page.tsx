@@ -2,7 +2,7 @@ import Post from '@/components/Post';
 import UpdateTagActionButton from '@/components/revalidate/UpdateTagActionButton';
 import { Suspense } from 'react';
 
-export default function page() {
+export default function Page() {
   return (
     <>
       <Suspense fallback='Loading...'>

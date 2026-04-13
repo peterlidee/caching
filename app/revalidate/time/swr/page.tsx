@@ -1,6 +1,6 @@
 import Post from '@/components/Post';
 
-export default function page() {
+export default function Page() {
   return (
     <>
       <Post postId={30} fetchOptions={{ next: { revalidate: 60 } }} />

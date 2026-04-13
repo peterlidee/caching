@@ -1,7 +1,7 @@
 import Post from '@/components/Post';
 import UpdateTagActionButton from '@/components/revalidate/UpdateTagActionButton';
 
-export default function page() {
+export default function Page() {
   return (
     <>
       <div className='mb-8'>

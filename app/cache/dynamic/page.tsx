@@ -2,7 +2,7 @@ import Post from '@/components/Post';
 
 export const dynamic = 'force-dynamic';
 
-export default function page() {
+export default function Page() {
   return (
     <div>
       <h2 className='font-bold mb-4'>Dynamic route + cache options</h2>

@@ -2,7 +2,7 @@ import Post from '@/components/Post';
 
 export const revalidate = 100;
 
-export default function page() {
+export default function Page() {
   return (
     <>
       <Post postId={21} fetchOptions={{}} />

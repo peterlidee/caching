@@ -8,7 +8,7 @@ export async function generateStaticParams() {
 
 export const dynamicParams = true; // true | false
 
-export default async function page({ params }: PageProps<'/blog/[id]'>) {
+export default async function Page({ params }: PageProps<'/blog/[id]'>) {
   const { id } = await params;
   return <SinglePost id={id} />;
 }

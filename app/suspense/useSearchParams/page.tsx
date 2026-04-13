@@ -3,7 +3,7 @@ import Footer from '@/components/static/Footer';
 import Header from '@/components/static/Header';
 import { Suspense } from 'react';
 
-export default function page() {
+export default function Page() {
   return (
     <>
       <Header />

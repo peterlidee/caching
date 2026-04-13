@@ -2,7 +2,7 @@ import User from '@/components/memoization/User';
 
 export const dynamic = 'force-dynamic';
 
-export default async function page() {
+export default async function Page() {
   return (
     <>
       <User fetchOptions={{}} />
